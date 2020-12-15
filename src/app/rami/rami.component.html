@@ -5,20 +5,20 @@
 
 <hr/>
 <h3>FORMULARIOS</h3>
-<form>
+<form [formGroup]="FormularioFormGroup"(ngSubmit) ="mostrar (FormularioFormGroup.value)">
     <p>
     <label for="nombre">Nombre</label>
-    <input type="text" name="nombre" placeholder="escribe aqui">
+    <input formControlName="nombre" type="text" name="nombre" placeholder="escribe aqui">
 </p>
 <p>
 <label for="descripcion">Descripcion</label>
-<textarea name="descripcion"></textarea>
+<textarea formControlName="descripcion" name="descripcion"></textarea>
 </p>
-<input type="radio" name="genero" value="hombre">Hombre<br/>
-<input type="radio" name="genero" value="mujer">Mujer<br/>
-<input type="radio" name="genero" value="nada">Nada<br/>
+<input  type="radio" name="genero" value="hombre">Hombre<br/>
+<input  type="radio" name="genero" value="mujer">Mujer<br/>
+<input  type="radio" name="genero" value="nada">Nada<br/>
 
-<select name="genero">
+<select formControlName="genero" name="genero">
 <option value="hombre">Hombre</option>
 <option value="mujer">Mujer</option>
 <option value="nada">Nada</option>
@@ -26,7 +26,7 @@
 
 </select>
 <p>
-<input type="submit" value="Enviar Formulario">
+<input  type="submit" value="Enviar Formulario">
 </p>
 </form>
 
