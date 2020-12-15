@@ -11,7 +11,8 @@ export class RamiComponent implements OnInit {
 
   ngOnInit(): void {
 
-    console.log("ESTOY IMPRIMIENTO")
+    console.log("ESTOY IMPRIMIENTO");
+    console.log("enviar fomulario");
 
   }
 
