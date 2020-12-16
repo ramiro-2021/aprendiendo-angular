@@ -1,0 +1,46 @@
+<br/><h1>Mas Formularios Contacto!</h1>
+<form [formGroup]="FormularioFormGroup"(ngSubmit) ="mostrar (FormularioFormGroup.value)">
+
+    <h3> Nombre: </h3>
+    <p>
+    <label for="nombre"></label>
+    <input formControlName="nombre" type="text" name="nombre" placeholder="escribe aqui el nombre">
+</p>
+
+<h3> Apellido: </h3>
+    
+<label for="apellido"></label>
+<input formControlName="apellido" type="text" name="apellido" placeholder="escribe aqui el apellido">
+<h3> Documento: </h3>
+
+<label for="documento"></label>
+<input formControlName="documento" type="text" name="documento" placeholder="escribe aqui el documento">
+<h3> Edad: </h3>
+
+<label for="edad"></label>
+<input formControlName="edad" type="number" name="edad" placeholder="escribe aqui la edad">
+
+<h3>Fecha de Nacimento</h3>
+
+
+<input formControlName="fecha" type="date" id="start" name="trip-start" value="2020-12-16" min="1930-01-01" >
+
+<h3>Email:</h3>
+<input formControlName="email" type="email" id="mail" name="user_mail">
+
+<h3>Genero:</h3>
+<select formControlName="genero" name="genero" >
+    <option value="hombre">Hombre</option>
+    <option value="mujer">Mujer</option>
+</select>
+    <h3>Mensaje: </h3>
+    <p>
+       
+        <textarea formControlName="mensaje" name="mensaje"></textarea>
+        </p>
+    
+
+<p>
+<input  type="submit" value="Enviar Formulario">
+</p>
+</form>
