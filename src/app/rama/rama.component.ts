@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-rama',
+  selector: 'app-root',
   templateUrl: './rama.component.html',
   styleUrls: ['./rama.component.css']
 })
 export class RamaComponent implements OnInit {
+
+
+
 
   fecha: Date ;
   
@@ -17,8 +21,9 @@ export class RamaComponent implements OnInit {
   ngOnInit(): void {
     this.procesar();
   }
-
+ 
   procesar() {
+  }
 
     //document.write(this.fecha.toString());
 
@@ -33,4 +38,4 @@ export class RamaComponent implements OnInit {
 
   }
 
-}
+

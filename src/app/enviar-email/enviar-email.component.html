@@ -1,0 +1,21 @@
+<h1>Enviar e-mail</h1>
+
+
+<h3>Email:</h3>
+<form [formGroup]="FormularioFormGroup"(ngSubmit) ="mostrar (FormularioFormGroup.value)">
+<input formControlName="email" type="email" id="mail" name="user_mail" placeholder="escribe aqui el e-mail">
+
+<h3>Nombre y Apellido</h3>
+
+<label for="nya"></label>
+<input formControlName="nya" type="text" name="nya" placeholder="escribe aqui el nombre y apellido">
+
+<h3>Mensaje: </h3>
+    <p>
+       
+        <textarea formControlName="mensaje" name="mensaje"></textarea>
+        </p>
+        <p>
+            <input  type="submit" value="Enviar Formulario">
+            </p>
+        </form>
