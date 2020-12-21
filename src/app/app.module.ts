@@ -10,6 +10,7 @@ import { MasFormulariosComponent } from './mas-formularios/mas-formularios.compo
 import { routes } from './app.routes';
 import { EnviarEmailComponent} from './enviar-email/enviar-email.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CalculadoraComponent } from './calculadora/calculadora.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     RamiComponent,
     RamaComponent,
     MasFormulariosComponent,
-    EnviarEmailComponent
+    EnviarEmailComponent,
+    CalculadoraComponent
 
   ],
   imports: [

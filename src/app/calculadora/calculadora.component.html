@@ -1,0 +1,25 @@
+<p>CALCULADORA</p>
+<div style="background-color: blueviolet;">
+    <form [formGroup]="FormularioFormGroup" (ngSubmit)="calcular (FormularioFormGroup.value)">
+        <label for="NUMERO1"></label>
+        <input formControlName="NUMERO1" type="number" name="NUMERO1" placeholder="ESCRIBE PRIMER Nº">
+        <label for="NUMERO2"></label>
+        <input formControlName="NUMERO2" type="number" name="NUMERO2" placeholder="ESCRIBE SEGUNDO Nº">
+        <p>
+            <input formControlName="operacion" type="radio" name="operacion" value="suma">suma<br />
+            <input formControlName="operacion" type="radio" name="operacion" value="resta">resta<br />
+            <input formControlName="operacion" type="radio" name="operacion" value="multiplicacion">multiplicacion<br />
+            <input formControlName="operacion" type="radio" name="operacion" value="division">division<br />
+        </p>
+    
+        <p>
+            <input type="submit" value="calcular">
+        </p>
+    </form>
+</div>
+
+
+<div style="background-color: chartreuse;">
+    <p>Resultado: {{resultado}}</p>
+    <h2>{{mensajito}}</h2>
+</div>
