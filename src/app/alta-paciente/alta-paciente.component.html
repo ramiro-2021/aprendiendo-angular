@@ -1,0 +1,40 @@
+<div class="image" style="height: 2000px; width:1600px;" [ngStyle]="{'background': 'url(
+    https://c8.alamy.com/compes/t7pjmd/bokeh-azul-abstracto-fondos-claros-t7pjmd.jpg) no-repeat 0 0 '}">
+<h1>Alta del paciente!</h1>
+
+<h3>Nombre: </h3>
+
+<form [formGroup]="FormularioFormGroup"(ngSubmit) ="mostrar (FormularioFormGroup.value)">
+<label for="nombre"></label>
+<input formControlName="nombre" type="text" name="nya" placeholder="escribe aqui el nombre ">
+<h3>Apellido: </h3>
+
+<label for="apellido"></label>
+<input formControlName="apellido" type="text" name="apellido" placeholder="escribe aqui el apellido ">
+
+<h3>DNI:</h3>
+<label for="documento"></label>
+<input formControlName="documento" type="number" name="documento" placeholder="escribe aqui el documento">
+
+<h3>Email:</h3>
+
+<input formControlName="email" type="email" id="mail" name="user_mail" placeholder="escribe aqui el e-mail">
+
+<h3>Obra Social:</h3>
+<select formControlName="obrasocial" name="obrasocial">
+    <option value="OS">Swiss Medical</option>
+    <option value="OS">OSDE</option>
+    <option value="OS">OSECAC</option> 
+    <option value="OS">Particular</option> </select>
+
+    <h3>Marca Propia:</h3>
+    <label for="marcapropia"></label>
+<input formControlName="marcapropia" type="text" name="marcapropia" placeholder="escribe marca propia">
+    
+<p>
+   <button type="submit" name="button" [@aniBoton]="state" (click)="togleBoton()"> Confirmar Alta/Envio de email</button></p>
+</form>
+
+
+</div>
+
