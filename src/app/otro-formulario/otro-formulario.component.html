@@ -1,3 +1,6 @@
 <p>OTRO FORMULARIO</p>
 
-<button type="button" name="button" [@aniBoton]="state" (click)="togleBoton()"> Boton animado</button>
+<button (click)="showToaster()" type="button" name="button" [@aniBoton]="state" (click)="togleBoton()"> Boton animado</button>
+<button (click)="showToaster()">
+    Show Toaster
+</button>

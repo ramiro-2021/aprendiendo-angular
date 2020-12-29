@@ -6,6 +6,8 @@ import{EnviarEmailComponent} from './enviar-email/enviar-email.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import{AltaPacienteComponent} from './alta-paciente/alta-paciente.component' ;
 import{OtroFormularioComponent} from './otro-formulario/otro-formulario.component';
+import { ToastComponent } from './toast/toast.component';
+
 
 export const routes :Routes=[
     { path: 'casa', component:MasFormulariosComponent},
@@ -14,7 +16,9 @@ export const routes :Routes=[
     { path: 'email', component:EnviarEmailComponent },
     { path: 'calculadora', component:CalculadoraComponent },
     { path: 'alta-paciente', component:AltaPacienteComponent },
-    {path:'otro-formulario', component:OtroFormularioComponent}
+    {path:'otro-formulario', component:OtroFormularioComponent},
+    {path:'toast', component:ToastComponent}
+
 ];  
 
 

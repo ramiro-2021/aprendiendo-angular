@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import{BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import{trigger,state,style,animate,transition} from '@angular/animations';
 import { mapToMapExpression } from '@angular/compiler/src/render3/util';
+import { ToastrService } from 'ngx-toastr';
 
 @Component ( {
   selector: 'app-otro-formulario',
@@ -26,11 +27,14 @@ import { mapToMapExpression } from '@angular/compiler/src/render3/util';
 })
 export class OtroFormularioComponent implements OnInit {
 public state:string="inactive";
-  constructor() { }
+  constructor(private toastr: ToastrService) { }
 
   ngOnInit(): void {
   }
 togleBoton(){
   this.state=this.state==='active' ? 'inactive' : 'active';
+}
+showToaster(){
+  this.toastr.success("Hello, I'm the toastr message.")
 }
 }

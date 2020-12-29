@@ -14,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import{AltaPacienteComponent} from './alta-paciente/alta-paciente.component' ;
 import{OtroFormularioComponent} from './otro-formulario/otro-formulario.component';
+import { ToastComponent } from './toast/toast.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -25,14 +27,19 @@ import{OtroFormularioComponent} from './otro-formulario/otro-formulario.componen
     CalculadoraComponent,
     AltaPacienteComponent,
     OtroFormularioComponent,
+    ToastComponent,
+   
 
+	  
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routes),
-    HttpClientModule],
+    HttpClientModule,
+    ToastrModule.forRoot() ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
