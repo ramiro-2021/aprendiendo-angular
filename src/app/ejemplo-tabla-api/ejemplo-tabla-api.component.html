@@ -1,0 +1,16 @@
+<h1>Listado de Clientes</h1>
+
+<table id="tablaClientes">
+    <tr>
+      <th *ngFor="let col of columnas">
+        {{col}}
+      </th>
+    </tr>
+    <tr *ngFor="let cliente of clientes">
+
+      <td *ngFor="let indice of indices">
+        {{cliente[indice]}}
+      </td>
+    </tr>
+  
+  </table>

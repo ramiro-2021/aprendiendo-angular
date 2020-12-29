@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import{AltaPacienteComponent} from './alta-paciente/alta-paciente.component' ;
 import{OtroFormularioComponent} from './otro-formulario/otro-formulario.component';
+import { EjemploTablaApiComponent } from './ejemplo-tabla-api/ejemplo-tabla-api.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import{OtroFormularioComponent} from './otro-formulario/otro-formulario.componen
     CalculadoraComponent,
     AltaPacienteComponent,
     OtroFormularioComponent,
+    EjemploTablaApiComponent,
 
   ],
   imports: [
