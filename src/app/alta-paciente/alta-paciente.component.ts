@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup,Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { ValueConverter } from '@angular/compiler/src/render3/view/template';
@@ -41,12 +41,12 @@ export class AltaPacienteComponent implements OnInit {
   )
      {
     this.FormularioFormGroup = this._builder.group({
-      nombre: ["",],
-      apellido: ["",],
-      documento: ["",],
-      email: ["",],
-      obrasocial: ["",],
-      marcapropia: ["",]
+      nombre: ["",[Validators.required]],
+      apellido: ["",[Validators.required]],
+      documento: ["",[Validators.required]],
+      email: ["",[Validators.required]],
+      obrasocial: ["",[Validators.required]],
+      marcapropia: ["",[Validators.required]]
 
     })
   }
@@ -54,7 +54,7 @@ export class AltaPacienteComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
+ 
 
   
   togleBoton() {
@@ -87,15 +87,14 @@ export class AltaPacienteComponent implements OnInit {
       subscribe({
         next: response => {
           console.log(response);
-         
-            
-        
-        
+                     
           this.enviarmail(value)
+            this.FormularioFormGroup.reset()
           this.toastr.success("funciono el envio")
           },
         error: error => {
           console.log(error)
+         
           this.toastr.error("error al enviar el mail")
        }
       })

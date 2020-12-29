@@ -3,37 +3,59 @@
 <h1>Alta del paciente!</h1>
 
 <h3>Nombre: </h3>
-
+<div>
 <form [formGroup]="FormularioFormGroup"(ngSubmit) ="mostrar (FormularioFormGroup.value)">
 <label for="nombre"></label>
-<input formControlName="nombre" type="text" name="nya" placeholder="escribe aqui el nombre ">
+<input formControlName="nombre" type="text" name="nya" placeholder="escribe aqui el nombre "> 
+
+<div>
+    <p *ngIf="FormularioFormGroup.get('nombre').hasError('required')">Requiere nombre</p>
+</div>
 <h3>Apellido: </h3>
-
-<label for="apellido"></label>
+<div>
+    <label for="apellido"></label>
 <input formControlName="apellido" type="text" name="apellido" placeholder="escribe aqui el apellido ">
-
+</div>
+<div>
+    <p *ngIf="FormularioFormGroup.get('apellido').hasError('required')">Requiere apellido</p>
+</div>
 <h3>DNI:</h3>
+<div>
 <label for="documento"></label>
 <input formControlName="documento" type="number" name="documento" placeholder="escribe aqui el documento">
-
+</div>
+<div>
+    <p *ngIf="FormularioFormGroup.get('documento').hasError('required')">Requiere documento</p>
+</div>
 <h3>Email:</h3>
-
+<div>
 <input formControlName="email" type="email" id="mail" name="user_mail" placeholder="escribe aqui el e-mail">
-
+</div>
+<div>
+    <p *ngIf="FormularioFormGroup.get('email').hasError('required')">Requiere email</p>
+</div>
 <h3>Obra Social:</h3>
+<div>
 <select formControlName="obrasocial" name="obrasocial">
     <option value="OS">Swiss Medical</option>
     <option value="OS">OSDE</option>
     <option value="OS">OSECAC</option> 
     <option value="OS">Particular</option> </select>
-
+</div>
+<div>
+    <p *ngIf="FormularioFormGroup.get('obrasocial').hasError('required')">requiere obra social</p>
+</div>
     <h3>Marca Propia:</h3>
+    <div>
     <label for="marcapropia"></label>
 <input formControlName="marcapropia" type="text" name="marcapropia" placeholder="escribe marca propia">
-    
-<p>
-   <button  type="submit" name="button"  [@aniBoton]="state" (click)="togleBoton()"> Confirmar Alta/Envio de email</button></p>
-   
+</div>
+<div>
+    <p *ngIf="FormularioFormGroup.get('marcapropia').hasError('required')">requiere marca propia</p>
+</div>
+<div>
+   <button  type="submit" name="button" [disabled]="FormularioFormGroup.invalid" [@aniBoton]="state"(click)="togleBoton()" > Confirmar Alta/Envio de email</button>
+</div>
   
   
 
