@@ -1,0 +1,29 @@
+<p>Nueva Calculadora</p>
+<div class="container">
+<div class="ordenar"></div>
+    <div>
+    <label for="cantidadone">Cantidad 1</label>
+    <input [(ngModel)]="cantidadone" type="number" class="form-control">
+        </div>
+        <div class="col-2">
+            <label for="cantidadtwo">Cantidad 2</label>
+            <input [(ngModel)]="cantidadtwo" type="number" class="form-control">
+</div>
+<div class="col"></div>
+<br><br>
+<br><br>
+<div>
+<button (click)="multiplication()" class="btn btn-primary btn-block">Multiplicar</button>
+
+</div>
+
+<br><br>
+<div>
+<h5 id="operation">Suma:</h5> <p>({{cantidadone}}+{{cantidadtwo}})=<strong>{{cantidadone+cantidadtwo}} </strong> </p>
+    <h5 id="operation">Resta:</h5> <p>({{cantidadone}}-{{cantidadtwo}})=<strong>{{cantidadone-cantidadtwo}} </strong></p>
+    <h5 id="operation">Division:</h5> <p>({{cantidadone}}/{{cantidadtwo}})=<strong>{{cantidadone/cantidadtwo}} </strong></p>
+   <p style="text-align: center;" *ngIf=" resultado >0">El Resultado de la multiplicacion es:<strong>{{resultado}}</strong></p> 
+
+</div>
+</div>
+

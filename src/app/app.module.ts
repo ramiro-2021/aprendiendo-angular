@@ -16,6 +16,10 @@ import{AltaPacienteComponent} from './alta-paciente/alta-paciente.component' ;
 import{OtroFormularioComponent} from './otro-formulario/otro-formulario.component';
 import { ToastComponent } from './toast/toast.component';
 import { ToastrModule } from 'ngx-toastr';
+import { TraerDatosComponent } from './traer-datos/traer-datos.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { NuevaCalculadoraComponent } from './nueva-calculadora/nueva-calculadora.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,6 +32,9 @@ import { ToastrModule } from 'ngx-toastr';
     AltaPacienteComponent,
     OtroFormularioComponent,
     ToastComponent,
+    TraerDatosComponent,
+    ReactiveFormsComponent,
+    NuevaCalculadoraComponent,
    
 
 	  
@@ -38,7 +45,8 @@ import { ToastrModule } from 'ngx-toastr';
     ReactiveFormsModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
-    ToastrModule.forRoot() ],
+    ToastrModule.forRoot() ,
+    FormsModule],
 
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,13 @@
+<p>Validaciones</p>
+
+<div class="container">
+<form  [formGroup]="miFormulario" > 
+Usuario: <input formControlName="username" [class.is-invalid]="miFormulario.get('username').touched && 
+miFormulario.get('username').invalid" type="text" class="form-control">
+<br>
+Password:<input [class.is-invalid]="miFormulario.get('userpassword').touched &&
+ miFormulario.get('userpassword').invalid" type="password" class= "form-control" formControlName="userpassword">
+<br>
+<button class="btn btn-primary" type="submit"   >Enviar</button>
+</form>
+</div>

@@ -7,7 +7,9 @@ import { CalculadoraComponent } from './calculadora/calculadora.component';
 import{AltaPacienteComponent} from './alta-paciente/alta-paciente.component' ;
 import{OtroFormularioComponent} from './otro-formulario/otro-formulario.component';
 import { ToastComponent } from './toast/toast.component';
-
+import { TraerDatosComponent } from './traer-datos/traer-datos.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { NuevaCalculadoraComponent } from './nueva-calculadora/nueva-calculadora.component';
 
 export const routes :Routes=[
     { path: 'casa', component:MasFormulariosComponent},
@@ -17,7 +19,10 @@ export const routes :Routes=[
     { path: 'calculadora', component:CalculadoraComponent },
     { path: 'alta-paciente', component:AltaPacienteComponent },
     {path:'otro-formulario', component:OtroFormularioComponent},
-    {path:'toast', component:ToastComponent}
+    {path:'toast', component:ToastComponent},
+    {path:'traer-datos', component:TraerDatosComponent},
+    {path:'reactive-forms', component:ReactiveFormsComponent},
+    {path:'nueva-calculadora', component:NuevaCalculadoraComponent}
 
 ];  
 
