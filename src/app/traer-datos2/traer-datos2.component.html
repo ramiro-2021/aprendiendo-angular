@@ -1,0 +1,27 @@
+<h2>Traer Datos por medio del Nombre</h2>
+<p>
+<input  type="text" (keyup)="tipear($event)" name="Nombre" placeholder="escribe aqui el nombre "> 
+</p>
+
+
+
+<h1>Trayendo Clientes por medio del Nombre</h1>
+<table id="TablaDeClientes2">
+    <tr>
+    <th *ngFor="let titulo of muchosTitulos">
+        {{titulo}}
+
+        
+        </th>
+</tr>
+
+<tr *ngFor="let cliente of clientes">
+
+    <td *ngFor="let indice of indices">
+      {{cliente[indice]}}
+    </td>
+  </tr>
+ 
+
+
+

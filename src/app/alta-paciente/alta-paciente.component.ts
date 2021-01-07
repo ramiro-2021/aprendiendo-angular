@@ -113,7 +113,9 @@ export class AltaPacienteComponent implements OnInit {
     this.http.post<any>('http://192.168.0.11:8989/mailsender/enviar', request).
       subscribe ( {
         next: response => {
-          console.log(response);},
+          console.log(response);
+      
+        },
          
         error: error => {
           console.log(error)

@@ -20,6 +20,7 @@ import { TraerDatosComponent } from './traer-datos/traer-datos.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { NuevaCalculadoraComponent } from './nueva-calculadora/nueva-calculadora.component';
 import {FormsModule} from '@angular/forms';
+import {TraerDatos2Component} from './traer-datos2/traer-datos2.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import {FormsModule} from '@angular/forms';
     TraerDatosComponent,
     ReactiveFormsComponent,
     NuevaCalculadoraComponent,
-   
+    TraerDatos2Component,
 
 	  
   ],

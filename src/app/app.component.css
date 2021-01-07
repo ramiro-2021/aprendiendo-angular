@@ -1,0 +1,7 @@
+body{
+    height: 600px;
+    background-color:hsl(180, 61%, 93%);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }

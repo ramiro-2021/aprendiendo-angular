@@ -10,6 +10,7 @@ import { ToastComponent } from './toast/toast.component';
 import { TraerDatosComponent } from './traer-datos/traer-datos.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { NuevaCalculadoraComponent } from './nueva-calculadora/nueva-calculadora.component';
+import {TraerDatos2Component} from './traer-datos2/traer-datos2.component';
 
 export const routes :Routes=[
     { path: 'casa', component:MasFormulariosComponent},
@@ -22,7 +23,8 @@ export const routes :Routes=[
     {path:'toast', component:ToastComponent},
     {path:'traer-datos', component:TraerDatosComponent},
     {path:'reactive-forms', component:ReactiveFormsComponent},
-    {path:'nueva-calculadora', component:NuevaCalculadoraComponent}
+    {path:'nueva-calculadora', component:NuevaCalculadoraComponent},
+    {path:'traer-datos2', component:TraerDatos2Component}
 
 ];  
 
