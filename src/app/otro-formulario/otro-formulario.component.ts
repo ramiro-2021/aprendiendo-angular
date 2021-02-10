@@ -3,6 +3,11 @@ import{BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import{trigger,state,style,animate,transition} from '@angular/animations';
 import { mapToMapExpression } from '@angular/compiler/src/render3/util';
 import { ToastrService } from 'ngx-toastr';
+import { HttpClient } from '@angular/common/http';
+import { BrowserModule } from "@angular/platform-browser";
+import { Subject } from 'rxjs';
+
+
 
 @Component ( {
   selector: 'app-otro-formulario',
@@ -17,7 +22,7 @@ import { ToastrService } from 'ngx-toastr';
 
       })),
     state('active', style({
-      backgroundColor:'#ff0000',
+      backgroundColor:'#62fc3b',
       transform:'scale(1.5)'
     })),
   transition('inactive => active', animate('100ms ease-in')),
@@ -26,15 +31,21 @@ import { ToastrService } from 'ngx-toastr';
 ]
 })
 export class OtroFormularioComponent implements OnInit {
+  
+
+  dtOptions: DataTables.Settings = {};
 public state:string="inactive";
   constructor(private toastr: ToastrService) { }
 
   ngOnInit(): void {
+    this.dtOptions = {
+      pagingType: 'full_numbers'
+    };
   }
 togleBoton(){
   this.state=this.state==='active' ? 'inactive' : 'active';
 }
 showToaster(){
-  this.toastr.success("Hello, I'm the toastr message.")
+  this.toastr.success("cartelito verde de afirmacion")
 }
 }

@@ -1,22 +1,20 @@
 <h1>Trayendo Clientes</h1>
-<table id="TablaDeClientes">
-    <tr>
-    <th *ngFor="let titulo of muchosTitulos">
-        {{titulo}}
 
-        
-        </th>
+ <div title="texto"><table id="TablaDeClientes">
+  <tr>
+  <th *ngFor="let titulo of muchosTitulos">
+      {{titulo}}
+
+  
+      </th>
 </tr>
 
 <tr *ngFor="let cliente of clientes">
 
-    <td *ngFor="let indice of indices">
-      {{cliente[indice]}}
-    </td>
-  </tr>
- 
-
-
-
-
+  <td *ngFor="let indice of indices">
+    {{cliente[indice]}}
+  </td>
+</tr>
 </table>
+<br>
+</div>

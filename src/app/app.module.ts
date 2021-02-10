@@ -21,6 +21,10 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
 import { NuevaCalculadoraComponent } from './nueva-calculadora/nueva-calculadora.component';
 import {FormsModule} from '@angular/forms';
 import {TraerDatos2Component} from './traer-datos2/traer-datos2.component';
+import { DataTablesModule } from "angular-datatables";
+import { DatatablesComponent } from './components/datatables/datatables.component';
+
+
 
 @NgModule({
   declarations: [
@@ -37,6 +41,8 @@ import {TraerDatos2Component} from './traer-datos2/traer-datos2.component';
     ReactiveFormsComponent,
     NuevaCalculadoraComponent,
     TraerDatos2Component,
+    DatatablesComponent,
+  
 
 	  
   ],
@@ -47,7 +53,9 @@ import {TraerDatos2Component} from './traer-datos2/traer-datos2.component';
     RouterModule.forRoot(routes),
     HttpClientModule,
     ToastrModule.forRoot() ,
-    FormsModule],
+    FormsModule,
+    DataTablesModule
+     ],
 
   providers: [],
   bootstrap: [AppComponent]

@@ -18,7 +18,7 @@ import { ToastrService } from 'ngx-toastr';
 
       })),
       state('active', style({
-        backgroundColor: '#ff0000',
+        backgroundColor: '#62fc3b',
         transform: 'scale(1.5)'
       })),
       transition('inactive => active', animate('100ms ease-in')),
